@@ -59,7 +59,7 @@ export const components: Record<string, FC<any>> = {
   p: (props) => <p className="mt-7 dark:text-lapis-100" {...props} />,
   blockquote: (props) => (
     <blockquote
-      className="pl-6 -ml-6 sm:pl-10 sm:-ml-10 md:pl-14 md:-ml-14 text-lapis-400 border-l-2 border-lapis-900 dark:border-light"
+      className="text-xs sm:text-sm pl-6 -ml-6 sm:pl-10 sm:-ml-10 md:pl-14 md:-ml-14 text-lapis-400 border-l-2 border-lapis-900 dark:border-light"
       {...props}
     />
   ),
