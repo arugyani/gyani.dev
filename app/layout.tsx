@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const viewPort: Viewport = {
+export const viewport: Viewport = {
   maximumScale: 1,
 };
 
