@@ -9,17 +9,20 @@ import { FC } from "react";
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const components: Record<string, FC<any>> = {
   h1: (props) => (
-    <h1 className="font-semibold mb-7 text-lapis-600 text-balance" {...props} />
+    <h1
+      className="font-semibold mb-7 text-lapis-600 dark:text-lapis-100 text-balance"
+      {...props}
+    />
   ),
   h2: (props) => (
     <h2
-      className="font-semibold mt-14 mb-7 text-lapis-600 text-balance"
+      className="font-semibold mt-14 mb-7 text-lapis-600 dark:text-lapis-100 text-balance"
       {...props}
     />
   ),
   h3: (props) => (
     <h3
-      className="font-semibold mt-14 mb-7 text-lapis-600 text-balance"
+      className="font-semibold mt-14 mb-7 text-lapis-600 dark:text-lapis-100 text-balance"
       {...props}
     />
   ),
@@ -53,7 +56,7 @@ export const components: Record<string, FC<any>> = {
     );
   },
   strong: (props) => <strong className="font-bold" {...props} />,
-  p: (props) => <p className="mt-7" {...props} />,
+  p: (props) => <p className="mt-7 dark:text-lapis-100" {...props} />,
   blockquote: (props) => (
     <blockquote
       className="pl-6 -ml-6 sm:pl-10 sm:-ml-10 md:pl-14 md:-ml-14 text-lapis-400 border-l border-lapis-900"
