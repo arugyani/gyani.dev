@@ -1,36 +1,58 @@
 @import "tailwindcss";
+@source "../mdx-components.tsx";
 
 :root {
-  /* LIGHT MODE */
-  --background: #fcfcfc;
-
-  --text: #2d2f33;
-  --text-muted: #5c5f66;
-
-  --accent: #4a6fa5;
-  --accent-muted: #c3d1e5;
-
   --font-sans: var(--sans), system-ui, sans-serif;
   --font-serif: var(--serif), ui-serif, serif;
   --font-mono: var(--mono), ui-monospace, monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@theme {
+  --color-light: #fcfcfc;
+  
+  --color-lapis-50: #ebedef;
+  --color-lapis-100: #d8dbdf;
+  --color-lapis-200: #b3b9c1;
+  --color-lapis-300: #8c95a1;
+  --color-lapis-400: #697381;
+  --color-lapis-500: #4a515b;
+  --color-lapis-600: #3b4149;
+  --color-lapis-700: #2b3035;
+  --color-lapis-800: #1e2125;
+  --color-lapis-900: #0e0f11;
+  --color-lapis-950: #07080a;
+  
+  --color-lapis-border: #d8dbdfb3;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0e0f11;
-    --foreground: #ededed;
-  }
+  --font-family-sans: var(--sans), -apple-system, ui-sans-serif, system-ui, sans-serif;
+  --font-family-serif: var(--serif), ui-serif, Georgia, Cambria, Times, serif;
+  --font-family-mono: var(--mono), ui-monospace, Consolas, monospace;
+
+  --breakpoint-text: 1220px;
+  --breakpoint-mobile: 420px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  text-rendering: geometricPrecision;
+}
+
+i,
+em,
+blockquote,
+nav {
+  font-family: var(--serif), Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-style: initial;
+}
+
+.dot-leaders {
+  text-align: end;
+  height: 1em;
+  overflow: hidden;
+  word-wrap: break-word;
+  letter-spacing: 6px;
+}
+
+.dot-leaders::after {
+  content: '······································································';
 }
