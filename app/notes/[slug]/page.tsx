@@ -1,3 +1,4 @@
+import MDXWrapper from "@/components/mdx-wrapper";
 import { promises as fs } from "fs";
 import path from "path";
 
@@ -7,13 +8,15 @@ export default async function Page(props: {
   }>;
 }) {
   const params = await props.params;
-  const { default: MDXContent } = await import(
+  const { default: MDXContent, metadata } = await import(
     "../_content/" + `${params.slug}.mdx`
   );
 
   return (
     <div className="text-justify font-zh">
-      <MDXContent />
+      <MDXWrapper draft={metadata.draft}>
+        <MDXContent />
+      </MDXWrapper>
     </div>
   );
 }
