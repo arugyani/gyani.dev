@@ -10,31 +10,31 @@ import { FC } from "react";
 export const components: Record<string, FC<any>> = {
   h1: (props) => (
     <h1
-      className="font-semibold mb-7 text-lapis-600 dark:text-lapis-100 text-balance"
+      className="font-semibold mb-4 text-lapis-600 dark:text-lapis-100 text-balance"
       {...props}
     />
   ),
   h2: (props) => (
     <h2
-      className="font-semibold mt-14 mb-7 text-lapis-600 dark:text-lapis-100 text-balance"
+      className="font-semibold mt-7 mb-4 text-lapis-600 dark:text-lapis-100 text-balance"
       {...props}
     />
   ),
   h3: (props) => (
     <h3
-      className="font-semibold mt-14 mb-7 text-lapis-600 dark:text-lapis-100 text-balance"
+      className="font-semibold mt-7 mb-4 text-lapis-600 dark:text-lapis-100 text-balance"
       {...props}
     />
   ),
   ul: (props) => (
     <ul
-      className="mt-7 list-disc list-outside marker:text-lapis-200 pl-5"
+      className="mt-4 list-disc list-outside marker:text-lapis-200 pl-5"
       {...props}
     />
   ),
   ol: (props) => (
     <ol
-      className="mt-7 list-decimal list-outside marker:text-lapis-200 pl-5"
+      className="mt-4 list-decimal list-outside marker:text-lapis-200 pl-5"
       {...props}
     />
   ),

@@ -45,6 +45,10 @@ nav {
   font-style: initial;
 }
 
+em {
+  font-style: italic;
+}
+
 .dot-leaders {
   text-align: end;
   height: 1em;
