@@ -10,19 +10,19 @@ import { FC } from "react";
 export const components: Record<string, FC<any>> = {
   h1: (props) => (
     <h1
-      className="font-semibold mb-4 text-lapis-600 dark:text-lapis-100 text-balance"
+      className="font-bold mb-4 text-lapis-600 dark:text-lapis-100 text-balance text-xl"
       {...props}
     />
   ),
   h2: (props) => (
     <h2
-      className="font-semibold mt-7 mb-4 text-lapis-600 dark:text-lapis-100 text-balance"
+      className="font-semibold mt-7 mb-2 text-lapis-600 dark:text-lapis-100 text-balance text-lg"
       {...props}
     />
   ),
   h3: (props) => (
     <h3
-      className="font-semibold mt-7 mb-4 text-lapis-600 dark:text-lapis-100 text-balance"
+      className="font-semibold mt-7 mb-2 text-lapis-600 dark:text-lapis-100 text-balance text-md"
       {...props}
     />
   ),
@@ -56,7 +56,7 @@ export const components: Record<string, FC<any>> = {
     );
   },
   strong: (props) => <strong className="font-bold" {...props} />,
-  p: (props) => <p className="mt-7 dark:text-lapis-100" {...props} />,
+  p: (props) => <p className="my-4 dark:text-lapis-100" {...props} />,
   blockquote: (props) => (
     <blockquote
       className="text-xs sm:text-sm pl-6 -ml-6 sm:pl-10 sm:-ml-10 md:pl-14 md:-ml-14 text-lapis-400 border-l-2 border-lapis-900 dark:border-light"

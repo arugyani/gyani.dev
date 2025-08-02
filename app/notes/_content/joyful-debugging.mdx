@@ -1,0 +1,34 @@
+export const metadata = { title: "Joyful debugging", date: "2025.08.02", description: "Some basic opinions on making your development life easier", draft: false }
+
+# Joyful debugging
+
+Over the past year, I've been lucky enough to work with some incredibly talented engineers and I've learned a lot from them. Here are two of the smaller tidbits I've learned.
+
+## How to *actually* use a debugger.
+Most engineers know *what* a debugger is. Many know *how* to use one. Far fewer know *when* to reach for it.
+
+Historically, I was a diehard print statement abuser. Whenever I was developing, I'd scatter print statements everywhere, drown in logs, and develop an impressive headache in the process.
+
+Then, about a month into my first and current full-time role, a senior engineer took pity on me and taught me how to use a debugger properly. In about 15 minutes, he changed my development work flow & helped me build confidence when dealing with gnarlier bugs. So to state the obvious: `debugger == good`.
+
+To be clear, I never stopped using print statements. I still reach for them all the time, especially for small-scale testing or quick sanity checks. Now, I'm just happy to be able to use both tools with intention.
+
+## How to *joyfully* debug with print statements
+A few months later, I was pair programming with our frontend lead and noticed a simple habit he had. His print statements had *personality*!
+
+```ts
+console.log(`🦄 ${someVariable}`)
+console.log(`🧐 pls don't be undefined – ${someVariable}`)
+```
+
+It's one of those small things (literally just some emojis or fun wording) that has such a surprising impact.
+
+When you're deep in a frustrating bug, that splash of joy in your terminal output is such a trooper when it comes to breaking things up. It keeps your brain out of self-destructive dives into tunnel vision and helps you stay engaged in what you're working on.
+
+> Is this going to make you a more efficient or better programmer? **Probably not.** Does this make debugging even a slightly better experience? **Yes.**
+
+As a side-bonus, these things act as wonderful visual cues to make scanning logs easier.
+
+### TL;DR
+- Learn when and how to use a debugger.
+- Let your personality shine and write some joyful print statements.
