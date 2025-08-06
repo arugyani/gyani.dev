@@ -1,7 +1,5 @@
 export const metadata = { title: "Joyful debugging", date: "2025.08.02", description: "Some basic opinions on making your development life easier", draft: false }
 
-> WIP - This note is in its first draft.
-
 # Joyful debugging
 
 Over the past year, I've been lucky enough to work with some great engineers and I've learned a lot from them. Here are two of the smaller tidbits I've learned.
@@ -11,11 +9,15 @@ Most engineers know *what* a debugger is. Many know *how* to use one. Far fewer 
 
 Historically, I have been a through & through print statement abuser. Whenever I was developing, I'd scatter print statements everywhere, drown in logs, and develop an impressive headache in the process.
 
-Then, about a month into my first and current full-time role, a senior engineer took pity on me and taught me how to use a debugger properly. In about 15 minutes, he changed my development work flow & helped me build confidence when dealing with gnarlier bugs. So to state the obvious: `debugger == good`.
+Then, about a month into my first and current full-time role, a senior engineer took pity on me and taught me how to use a debugger properly. In about 15 minutes, he changed my development work flow & helped me build confidence when dealing with gnarlier bugs.  To be clear, I never stopped using print statements. I still reach for them all the time, especially for small-scale testing or quick sanity checks.
 
-To be clear, I never stopped using print statements. I still reach for them all the time, especially for small-scale testing or quick sanity checks. Now, I'm just happy to be able to use both tools with intention.
+> Some relevant resources:
+> - [Debug code with VSCode (official docs)](https://code.visualstudio.com/docs/debugtest/debugging)
+> - [Article on debugging with VSCode](https://dsinecos.github.io/blog/Debugging-with-VSCode)
 
 ## How to *joyfully* debug with print statements
+Now, if using a debugger is so powerful, why should we ever use something else? Beyond convenience, good vibes are often a great reason to do something.
+
 A few months later, I was pair programming with our frontend lead and noticed a simple habit he had. His print statements had *personality*!
 
 ```ts
