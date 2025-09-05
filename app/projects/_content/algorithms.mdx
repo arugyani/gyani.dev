@@ -18,7 +18,7 @@ I wanted this project to be as lightweight as I could reasonably get it, so I ke
 - [SFML](https://www.sfml-dev.org/) — SFML is a C++. multi-media rendering library. In other words, SFML is to C++ what Lego bricks are to plastic.
 
 ## Structure
-The structure of this project is fairly straight forward. I tried to keep logic relatively de-coupled between interactable UI components & the visualizer itself. Thus,
+The structure of this project is fairly straight forward. I tried to keep logic relatively de-coupled between interactive UI components & the visualizer itself. Thus,
 
 ```txt
 Core/
@@ -39,7 +39,7 @@ With that out of the way, let's take a look at how things work.
 Following the nearly ubiquitous C++ pattern, `main.cpp` is the primary entry point to the application. Here, the following actions occur (in order):
 1. A window object is instantiated from `Core::Window`
 2. Two shared pointers are created referencing `Core::Canvas` and `Core::Grid`, respectively.
-3. The grid is intialized and added to the canvas.
+3. The grid is initialized and added to the canvas.
 4. UI components are created under their own shared pointers.
 5. The canvas & all UI components are added to the window
 6. The window is started!
