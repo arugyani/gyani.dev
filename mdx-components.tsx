@@ -1,6 +1,6 @@
 import { MDXComponents } from "mdx/types";
 import Link from "next/link";
-import { FC } from "react";
+import { FC, ReactElement } from "react";
 
 /** TODO
  *    1) Finish styling all headings
@@ -56,16 +56,40 @@ export const components: Record<string, FC<any>> = {
     );
   },
   strong: (props) => <strong className="font-bold" {...props} />,
-  p: (props) => <p className="my-4 dark:text-lapis-100" {...props} />,
+  p: (props) => <p className="mb-4 dark:text-lapis-100" {...props} />,
   blockquote: (props) => (
     <blockquote
       className="text-xs sm:text-sm pl-6 -ml-6 sm:pl-10 sm:-ml-10 md:pl-14 md:-ml-14 text-lapis-400 border-l-2 border-lapis-900 dark:border-light"
       {...props}
     />
   ),
-  pre: (props) => (
-    <pre className="mt-7 whitespace-pre md:whitespace-pre-wrap" {...props} />
-  ),
+  pre: (props) => {
+    const child = props.children as
+      | ReactElement<{ className?: string }>
+      | undefined;
+    const language = child?.props?.className?.replace("language-", "") ?? "";
+
+    return (
+      <div className="relative my-7">
+        <pre
+          className="
+            whitespace-pre md:whitespace-pre-wrap
+            rounded-xl border
+            px-4 py-3
+            overflow-x-auto
+            text-sm font-mono leading-relaxed
+            bg-lapis-50 text-lapis-800 border-lapis-border
+            dark:bg-lapis-900 dark:text-lapis-100 dark:border-lapis-700"
+          {...props}
+        />
+        {language && (
+          <span className="absolute top-2 right-3 rounded-md px-2 py-0.5 text-xs font-medium text-lapis-500 dark:text-lapis-200 select-none">
+            {language.toUpperCase()}
+          </span>
+        )}
+      </div>
+    );
+  },
 };
 export function useMDXComponents(inherited: MDXComponents): MDXComponents {
   return {

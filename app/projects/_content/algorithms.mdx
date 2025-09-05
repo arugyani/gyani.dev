@@ -1,0 +1,47 @@
+export const metadata = { title: "Algorithm Visualizer", date: "2025.07.15", description: "A write up on the background and details of building this site.", }
+
+> [Source Code](https://github.com/arugyani/algorithms)
+
+# Algorithm Visualizer
+
+After graduating college in 2024, I was a bit bored over the summer as I waited to start my job. Once my boredom hit its peak in July, I decided to build a tiny algorithm visualizer. This is a fairly classic project and I'd never built one until this point, so my thought process was that there's no better time than the present. Let's dive in!
+
+## Goals
+There were a couple things I wanted to achieve with this project:
+1. Try out some graphics programming in C++
+2. Gain a more intuitive understanding of how Dijkstra's Algorithm works
+3. Stop being bored
+
+## Tech Stack
+I wanted this project to be as lightweight as I could reasonably get it, so I kept things quite simple.
+- [C++](https://cplusplus.com/) — For the uninitiated, C++ is one of the most famously used programming languages in the world.
+- [SFML](https://www.sfml-dev.org/) — SFML is a C++. multi-media rendering library. In other words, SFML is to C++ what Lego bricks are to plastic.
+
+## Structure
+The structure of this project is fairly straight forward. I tried to keep logic relatively de-coupled between interactable UI components & the visualizer itself. Thus,
+
+```txt
+Core/
+    Algorithm.cpp
+    Canvas.cpp
+    Grid.cpp
+    Node.cpp
+    Window.cpp
+UI/
+    Button.cpp
+    Text.cpp
+main.cpp
+```
+
+With that out of the way, let's take a look at how things work.
+
+### Entry point
+Following the nearly ubiquitous C++ pattern, `main.cpp` is the primary entry point to the application. Here, the following actions occur (in order):
+1. A window object is instantiated from `Core::Window`
+2. Two shared pointers are created referencing `Core::Canvas` and `Core::Grid`, respectively.
+3. The grid is intialized and added to the canvas.
+4. UI components are created under their own shared pointers.
+5. The canvas & all UI components are added to the window
+6. The window is started!
+
+> TO BE CONTINUED
